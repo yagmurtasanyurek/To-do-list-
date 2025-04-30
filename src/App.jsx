@@ -11,6 +11,7 @@ function App() {
     const newTask = {
       name: taskName,
       isDone: false,
+      id: Math.round(Math.random() * 9999),
     };
 
     //functional state updater, cause state depends on previous one.
