@@ -18,6 +18,11 @@ function App() {
     setTasks((prev) => [newTask, ...prev]);
   };
 
+  const deleteTask = (idToDelete) => {
+    //functional state updater, cause state depends on previous one.
+    setTasks((prev) => prev.filter((task) => task.id !== idToDelete));
+  };
+
   useEffect(() => {
     console.log(tasks);
   }, [tasks]);
@@ -26,7 +31,7 @@ function App() {
     <div>
       <Header />
       <TaskInput onAddTask={createTask} />
-      <TaskList tasks={tasks} />
+      <TaskList tasks={tasks} onDeleteTask={deleteTask} />
     </div>
   );
 }
