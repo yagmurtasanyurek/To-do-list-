@@ -1,9 +1,12 @@
 import { RiDeleteBin5Line } from "react-icons/ri";
 import { MdDelete } from "react-icons/md";
+import TasksContext from "../context/tasks.jsx";
+import { useContext } from "react";
 
-function ShowTask({ task, onDeleteTask }) {
+function ShowTask({ task }) {
+  const { deleteTask } = useContext(TasksContext);
   const handleDeleteClick = () => {
-    onDeleteTask(task.id);
+    deleteTask(task.id);
   };
 
   return (
