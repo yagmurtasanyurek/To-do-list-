@@ -2,13 +2,13 @@ import TaskInput from "./components/TaskInput.jsx";
 import TaskList from "./components/TaskList.jsx";
 import Header from "./components/Header.jsx";
 import TasksContext from "./context/tasks.jsx";
-import { useContext, useEffect, useState } from "react";
+import { useContext, useEffect } from "react";
 
 function App() {
-  const { tasks, createTask } = useContext(TasksContext);
+  const { tasks, fetchTasks } = useContext(TasksContext);
   useEffect(() => {
-    console.log(tasks);
-  }, [tasks]);
+    fetchTasks();
+  }, [fetchTasks]);
 
   return (
     <div>
