@@ -1,5 +1,3 @@
-import TasksContext from "../context/TasksContext.jsx";
-import { useContext } from "react";
 import TaskDelete from "./TaskDelete.jsx";
 
 function ShowTask({ task }) {
