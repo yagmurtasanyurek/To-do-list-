@@ -6,9 +6,6 @@ import { useContext, useEffect } from "react";
 
 function App() {
   const { tasks, fetchTasks } = useContext(TasksContext);
-  useEffect(() => {
-    fetchTasks();
-  }, [fetchTasks]);
 
   return (
     <div>
