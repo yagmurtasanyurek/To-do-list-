@@ -1,8 +1,13 @@
+import { FaTasks } from "react-icons/fa";
+import "bulma/css/bulma.css";
 function Header() {
   return (
-    <div>
-      <h1>To Do List</h1>
-    </div>
+    <section className="hero is-primary">
+      <div className="hero-body">
+        <FaTasks />
+        <h1 className="title">To Do List</h1>
+      </div>
+    </section>
   );
 }
 
