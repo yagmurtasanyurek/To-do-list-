@@ -1,6 +1,6 @@
 import { RiDeleteBin5Line } from "react-icons/ri";
 import { MdDelete } from "react-icons/md";
-import TasksContext from "../context/tasks.jsx";
+import TasksContext from "../context/TasksContext.jsx";
 import { useContext } from "react";
 
 function ShowTask({ task }) {
@@ -10,13 +10,13 @@ function ShowTask({ task }) {
   };
 
   return (
-    <div>
+    <li>
       <input type="checkbox"></input>
       {task.name}
       <button onClick={handleDeleteClick}>
         <MdDelete />
       </button>
-    </div>
+    </li>
   );
 }
 export default ShowTask;

@@ -1,4 +1,4 @@
-import TasksContext from "../context/tasks.jsx";
+import TasksContext from "../context/TasksContext.jsx";
 import ShowTask from "./ShowTask";
 import { useContext } from "react";
 
@@ -8,6 +8,10 @@ function TaskList() {
   const renderedTasks = tasks.map((task) => {
     return <ShowTask task={task} key={task.id} />;
   });
-  return <div>{renderedTasks}</div>;
+  return (
+    <div>
+      <ul>{renderedTasks}</ul>
+    </div>
+  );
 }
 export default TaskList;

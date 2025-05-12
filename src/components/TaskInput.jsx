@@ -1,5 +1,5 @@
 import { useState, useContext } from "react";
-import TasksContext from "../context/tasks";
+import TasksContext from "../context/TasksContext";
 
 function TaskInput() {
   const [taskName, setTaskName] = useState("");
