@@ -1,40 +1,22 @@
 import { createContext, useEffect, useState } from "react";
 
-const TasksContext = createContext();
+const TasksContext = createContext(null);
 
-function Provider({ children }) {
-  const [tasks, setTasks] = useState([]);
-
-  useEffect(() => {
-    fetchTasks();
-  }, []);
-
-  useEffect(() => {
-    localStorage.setItem("tasks", JSON.stringify(tasks));
-  }, [tasks]);
-
-  const fetchTasks = () => {
-    const stored = localStorage.getItem("tasks");
-    if (stored) {
-      try {
-        setTasks(JSON.parse(stored));
-      } catch (err) {
-        console.error("Failed to parse tasks from localStorage", err);
-        setTasks([]);
-      }
-    } else {
-      setTasks([]);
+function TasksProvider({ children }) {
+  const [tasks, setTasks] = useState(() => {
+    try {
+      return JSON.parse(localStorage.getItem("tasks")) || [];
+    } catch (err) {
+      console.error("Failed to parse tasks from localStorage", err);
+      return [];
     }
-  };
+  });
 
   const createTask = (taskName) => {
     const newTask = { name: taskName, id: Math.round(Math.random() * 9999) };
-    setTasks((prev) => {
-      const updated = [newTask, ...prev];
-      // it was working without this:
-      localStorage.setItem("tasks", JSON.stringify(updated));
-      return updated;
-    });
+    const updated = [newTask, ...tasks];
+    setTasks(updated);
+    localStorage.setItem("tasks", JSON.stringify(updated));
   };
 
   const deleteTask = (id) => {
@@ -57,5 +39,5 @@ function Provider({ children }) {
   );
 }
 
-export { Provider };
+export { TasksProvider };
 export default TasksContext;
