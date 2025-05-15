@@ -1,9 +1,10 @@
 import TaskDelete from "./TaskDelete.jsx";
+import Checkbox from "./Checkbox.jsx";
 
 function ShowTask({ task }) {
   return (
     <li>
-      <input type="checkbox"></input>
+      <Checkbox task={task} />
       {task.name}
       <TaskDelete task={task} />
     </li>

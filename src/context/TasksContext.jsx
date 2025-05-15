@@ -1,4 +1,4 @@
-import { createContext, useEffect, useState } from "react";
+import { createContext, useState } from "react";
 
 const TasksContext = createContext(null);
 
@@ -13,10 +13,22 @@ function TasksProvider({ children }) {
   });
 
   const createTask = (taskName) => {
-    const newTask = { name: taskName, id: Math.round(Math.random() * 9999) };
+    const newTask = {
+      name: taskName,
+      id: Math.round(Math.random() * 9999),
+      isDone: false,
+    };
     const updated = [newTask, ...tasks];
     setTasks(updated);
     localStorage.setItem("tasks", JSON.stringify(updated));
+  };
+
+  const checkTasks = (id, checked) => {
+    const updatedTasks = tasks.map((task) =>
+      task.id === id ? { ...task, isDone: checked } : task
+    );
+    localStorage.setItem("tasks", JSON.stringify(updatedTasks));
+    setTasks(updatedTasks);
   };
 
   const deleteTask = (id) => {
@@ -31,6 +43,7 @@ function TasksProvider({ children }) {
     tasks,
     createTask,
     deleteTask,
+    checkTasks,
   };
   return (
     <TasksContext.Provider value={valueToShare}>
