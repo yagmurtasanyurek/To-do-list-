@@ -8,7 +8,7 @@ function TaskDelete({ task }) {
     deleteTask(task.id);
   };
   return (
-    <button onClick={handleDeleteClick}>
+    <button className="cursor-pointer" onClick={handleDeleteClick}>
       <MdDelete />
     </button>
   );

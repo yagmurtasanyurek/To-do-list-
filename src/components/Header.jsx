@@ -1,12 +1,8 @@
-import { FaTasks } from "react-icons/fa";
 function Header() {
   return (
-    <section>
-      <div>
-        <FaTasks />
-        <h1>To Do List</h1>
-      </div>
-    </section>
+    <div className="text-[48px] text-gray-100 mb-10">
+      <h1>TO DO</h1>
+    </div>
   );
 }
 
