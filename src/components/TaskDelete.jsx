@@ -1,6 +1,6 @@
 import TasksContext from "../context/TasksContext";
 import { useContext } from "react";
-import { MdDelete } from "react-icons/md";
+import { IoIosClose } from "react-icons/io";
 
 function TaskDelete({ task }) {
   const { deleteTask } = useContext(TasksContext);
@@ -9,7 +9,7 @@ function TaskDelete({ task }) {
   };
   return (
     <button className="cursor-pointer" onClick={handleDeleteClick}>
-      <MdDelete />
+      <IoIosClose className="w-5 h-5" />
     </button>
   );
 }

@@ -9,7 +9,7 @@ function TaskList() {
     return <ShowTask task={task} key={task.id} />;
   });
   return (
-    <div className="bg-neutral-100  rounded-xl overflow-hidden">
+    <div className="bg-amber-50  rounded-xl overflow-hidden">
       <ul>{renderedTasks}</ul>
     </div>
   );

@@ -12,7 +12,12 @@ function Checkbox({ task }) {
   };
 
   return (
-    <input type="checkbox" checked={checked} onChange={handleChange}></input>
+    <input
+      className="w-5 h-4 accent-green-500 bg-amber-300"
+      type="checkbox"
+      checked={checked}
+      onChange={handleChange}
+    ></input>
   );
 }
 

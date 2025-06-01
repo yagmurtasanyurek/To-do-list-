@@ -17,11 +17,12 @@ function TaskInput() {
   return (
     <form
       onSubmit={handleSubmit}
-      className="flex w-full  bg-neutral-100 mb-8 rounded-xl"
+      className="flex w-full  bg-amber-50 mb-8 rounded-xl"
     >
       <input
         className=" min-h-8 p-3 grow rounded-xl outline-red-300 focus:outline-2 "
         value={taskName}
+        placeholder="Write out your plans"
         onChange={handleChange}
       />
       <button className=" rounded-r-sm cursor-pointer min-h-8 grow-0 p-3">
