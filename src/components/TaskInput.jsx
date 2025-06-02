@@ -20,13 +20,13 @@ function TaskInput() {
       className="relative flex w-full  bg-amber-50 mb-8 rounded-xl"
     >
       <input
-        className=" min-h-15 px-4 grow rounded-xl outline-red-300 focus:outline-2 "
+        className=" min-h-15 px-4 grow rounded-xl outline-red-300 focus:outline-2  "
         value={taskName}
         name="userTask"
         placeholder="Write out your plans"
         onChange={handleChange}
       />
-      <button className="absolute right-0 top-1.5 rounded-r-xl cursor-pointer min-h-8 grow-0 p-3">
+      <button className="absolute right-0 top-1.5 rounded-r-xl cursor-pointer min-h-8 grow-0 p-3 bg-amber-50">
         Add
       </button>
     </form>
