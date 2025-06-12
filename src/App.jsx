@@ -18,7 +18,7 @@ function App() {
         />
       </div>
       <div className="flex justify-center">
-        <div className=" z-10 w-2/5 min-w-max -mt-37">
+        <div className=" z-10 w-1/2 -mt-37">
           <Header />
           <TaskInput />
           <TaskList />
