@@ -8,7 +8,12 @@ function TaskDelete({ task }) {
     deleteTask(task.id);
   };
   return (
-    <button className="cursor-pointer" onClick={handleDeleteClick}>
+    <button
+      aria-label="Delete Task"
+      title="Delete"
+      className="cursor-pointer"
+      onClick={handleDeleteClick}
+    >
       <IoIosClose className="w-5 h-5" />
     </button>
   );

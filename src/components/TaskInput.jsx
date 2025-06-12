@@ -26,7 +26,10 @@ function TaskInput() {
         placeholder="Write out your plans"
         onChange={handleChange}
       />
-      <button className="absolute right-0 top-1.5 rounded-r-xl cursor-pointer min-h-8 grow-0 p-3 bg-amber-50">
+      <button
+        aria-label="Add Task"
+        className="absolute right-0 top-1.5 rounded-r-xl cursor-pointer min-h-8 grow-0 p-3 bg-amber-50"
+      >
         Add
       </button>
     </form>
