@@ -20,11 +20,12 @@ function TaskInput() {
       className="relative flex w-full  bg-amber-50 mb-8 rounded-xl"
     >
       <input
-        className=" min-h-15 px-4 grow rounded-xl outline-red-300 focus:outline-2 "
+        className=" min-h-15 px-4 grow rounded-xl focus:outline-none "
         value={taskName}
         name="userTask"
         placeholder="Write out your plans"
         onChange={handleChange}
+        autoComplete="off"
       />
       <button
         aria-label="Add Task"
