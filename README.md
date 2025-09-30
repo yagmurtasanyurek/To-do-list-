@@ -25,7 +25,7 @@ A simple and responsive to-do list application where users can add, check, and d
 
 ## Installation & Setup
 1. Clone the repository:
-   git clone https://github.com/yagmurtasanyurek/todo-list-app.git
+   git clone https://github.com/yagmurtasanyurek/Todo-list-.git
 2. Navigate to the project folder:
    cd todo-app
 3. Install dependencies:
