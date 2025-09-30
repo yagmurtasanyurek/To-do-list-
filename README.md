@@ -18,10 +18,10 @@ A simple and responsive to-do list application where users can add, check, and d
 ## Screenshots
 
 ### Desktop View
-![Desktop screenshot](todo-desktop.png)
+![Desktop screenshot](./todo-desktop.png)
 
 ### Mobile View
-![Mobile screenshot](todo-mobile.png)
+![Mobile screenshot](./todo-mobile.png)
 
 ## Installation & Setup
 1. Clone the repository:
